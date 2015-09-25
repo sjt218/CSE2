@@ -29,7 +29,7 @@ public class Calculator{
         int operator = myScan.nextInt();
         //Where result will be stored
         double result;
-        
+        //If 1, then add. If 2, then subtract. If 3, then multiply, if 4, then divide. Else, print invalid operator.
         switch (operator) {
             case 1: result = int1 + int2;
                     break;

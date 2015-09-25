@@ -1,0 +1,60 @@
+//Salvador Joshua Tarun III
+//CalculatorSpecial Java Program
+//
+//Compile program first
+//Use javac CalculatorSpecial.java in the command prompt
+//Run the program
+//Uses java CalculatorSpecial
+
+//Will bring in a Scanner for the user to input data
+import java.util.Scanner;
+//Define a class
+public class CalculatorSpecial{
+   
+    // add main method
+    public static void main(String[] args) {
+        String check;
+        String n = "n";
+        String N = "N";
+        boolean go = true;
+        //Creates Scanner and prompts question, not on a new line for the input
+        Scanner myScan = new Scanner( System.in );
+        while (go == true){
+            System.out.print("Enter first number: ");
+        
+            //Creates first double
+            double int1 = myScan.nextDouble();
+        
+            //Prompts the user for second double
+            System.out.print("Enter second number: ");
+            double int2 = myScan.nextDouble();
+        
+            //scans for a string that needs to be a symbol
+            System.out.print("Enter the operator, + is 1, - is 2, * is 3, / is 4: ");
+            int operator = myScan.nextInt();
+            //Where result will be stored
+            double result;
+            //If 1, then add. If 2, then subtract. If 3, then multiply, if 4, then divide. Else, print invalid operator.
+            switch (operator) {
+                case 1: result = int1 + int2;
+                        break;
+                case 2: result = int1 - int2;
+                        break;
+                case 3: result = int1 * int2;
+                        break;
+                case 4: result = int1 / int2;
+                        break;
+                default: System.out.println("Invalid operator.");
+                        result = 0;
+                        break;
+            }
+            System.out.println("The answer is " + result + ". ");
+            System.out.println("Type n or N to stop.");
+            check = myScan.next();
+            if(check.equals(n) || check.equals(N)){
+                go = false;
+            }
+        }
+         
+    }  
+}
