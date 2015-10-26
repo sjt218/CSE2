@@ -13,19 +13,13 @@
 import java.util.Scanner;
 //Define a class
 public class test{
-public static int addAll() {
-    int i =1;
-    int j = 0;
-    while(i <10){
-     j = j +i;
-     if(i == 5){
-       return j;
-     }
-     i++;
+    public static void main(String[] args){
+       Print(38, 45);
     }
-    return i + j;
-  }
-  public static void main(String args[]) {
-    System.out.println(addAll());
-  }
+    public static void Print(int num, double num2) {
+    System.out.println(num + "-" + num2);
+    }
+    public static void Print(double num, int num2) {
+    System.out.println(num + "-" + num2);
+    }
 }
