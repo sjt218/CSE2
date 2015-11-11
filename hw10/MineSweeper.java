@@ -1,10 +1,10 @@
 //Salvador Joshua Tarun III
-//test Java Program
+//MineSweeper Java Program
 //
 //Compile program first
-//Use javac test.java in the command prompt
+//Use javac MineSweeper.java in the command prompt
 //Run the program
-//Uses java test
+//Uses java MineSweeper
 //git add .
 //git commit -m "finished"
 //git push -u
@@ -12,9 +12,9 @@
 //Will bring in a Scanner for the user to input data
 import java.util.Scanner;
 import java.util.Random;
-import java.util.Arrays;
 //Define a class
-public class test{
+public class MineSweeper{
+   
     // add main method
     public static void main(String[] args) {
         boolean go = true;
@@ -77,30 +77,42 @@ public class test{
             for(int i = 0; i < num; i++){
                 for(int j = 0; j < num; j++){
                     count = 0;
-                    if(i-1 >= 0 && m.equals(field[i-1][j])){
-                        count++;
-                    } 
-                    if(i-1 >= 0 && j-1 >= 0 && m.equals(field[i-1][j-1])){
-                        count++;
+                    if(i-1 >= 0){
+                        if(m.equals(field[i-1][j])){
+                            count++;
+                        }
+                        if(j-1 >= 0){
+                            if(m.equals(field[i-1][j-1])){
+                                count++;
+                            }
+                        }
+                        if(j+1 < num){
+                            if(m.equals(field[i-1][j+1])){
+                                count++;
+                            }
+                        }
                     }
-                    if(i-1 >= 0 && j-1 >= 0 && m.equals(field[i-1][j+1])){
-                        count++;
-                    }
-                    if(i+1 < num-1 && m.equals(field[i+1][j])){
-                        count++;
-                    }
-                    if(i-1 >= 0 && j-1 >= 0 && m.equals(field[i+1][j-1])){
-                        count++;
-                    }
-                    if(i-1 >= 0 && j-1 >= 0 && m.equals(field[i+1][j+1])){
-                        count++;
+                    if(i+1 <= num-1){
+                        if(m.equals(field[i+1][j])){
+                            count++;
+                        }
+                        if(j-1 >= 0){
+                            if(m.equals(field[i+1][j-1])){
+                                count++;
+                            }
+                        }
+                        if(j+1 <= num-1){
+                            if(m.equals(field[i+1][j+1])){
+                                count++;
+                            }
+                        }
                     }
                     if(j-1 >= 0){
                         if(m.equals(field[i][j-1])){
                             count++;
                         }
                     }
-                    if(j+1 < num){
+                    if(j+1 <= num-1){
                         if(m.equals(field[i][j+1])){
                             count++;
                         }
