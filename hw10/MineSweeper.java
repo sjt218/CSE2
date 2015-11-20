@@ -6,7 +6,7 @@
 //Run the program
 //Uses java MineSweeper
 //git add .
-//git commit -m "finished"
+//git commit -m "Finished"
 //git push -u
 
 //Will bring in a Scanner for the user to input data
